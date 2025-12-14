@@ -1,6 +1,6 @@
 <footer>
   <div class="Footer-box">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-5">
           <div class="footer-about">
@@ -16,26 +16,31 @@
               die needs in and around sivakasi industry. We Sivakasi based
               Company.
             </p>
-            <button class="btn btn-white">SIGN UP FOR DISCOUNTS</button>
+            <!-- <button class="btn btn-white">SIGN UP FOR DISCOUNTS</button> -->
           </div>
         </div>
         <div class="col-md-3">
           <div class="footer-hussle">
-            <h4><strong class="text-uppercase">Contact</strong></h4>
-            <div>
-                <h5>
-                    306,2 Nehru Road Bilal Mahal Backside Phone: +91 6383702043
-                </h5>
+            <h4><strong class="text-uppercase">Our Contact</strong></h4>
+            <div class="text-center">
+              <strong class="text-center"><u>Company Address</u></strong>
+              <h5>
+                306,2 Nehru Road Bilal Mahal Backside
+              </h5>
+              <strong class="text-center"><u>Phone:</u></strong>
+              <br />
+              +91 6383702043
               <div class="text-center">
-               <h5>
-                <strong><u>Email</u></strong>
-               </h5> 
+                <h5>
+                  <strong><u>Email</u></strong>
+                </h5>
                 <em>
                   <a href="mailto:indiandiemakersivakasi@gmail.com"
                     >indiandiemakersivakasi&#64;gmail.com</a
                   >
                 </em>
-            </div>
+                <p data-toggle="modal" href="#myModal" class="pe-auto cursor-pointer" (click)="checkMyPolicy()" >Privacy Policy</p>
+              </div>
             </div>
           </div>
         </div>
@@ -74,3 +79,23 @@
     </div>
   </div>
 </footer>
+  <!-- Button trigger modal -->
+  <!-- <a  class="btn btn-primary btn-lg">Launch demo modal</a> -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">WEBSITE PRIVACY </h4>
+        </div>
+        <div class="modal-body" [innerHtml]="dynamicHtml">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->

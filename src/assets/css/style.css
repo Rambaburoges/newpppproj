@@ -3,6 +3,18 @@ MEDIA QUERIES
 */
 
 /*media queries */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins" sans-serif;
+}
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --primary-color: #3a4052;
+}
 @media only screen and (max-width: 767px) {
   .showcase .video-container {
     display: block;
@@ -46,18 +58,6 @@ MEDIA QUERIES
     display: grid;
     margin: 0 auto;
   }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "poppins" sans-serif;
-}
-:root {
-  --success-color: #2ecc71;
-  --error-color: #e74c3c;
-  --primary-color: #3a4052;
 }
 .navbar-default {
   background-color: #fff;
