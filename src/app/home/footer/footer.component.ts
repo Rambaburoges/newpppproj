@@ -33,7 +33,7 @@ constructor(private sanitizer: DomSanitizer) {
       <p>Data is used solely for site operation, analytics, and abuse prevention. Logs are shared only with Google as the hosting provider and not with other third parties. Google processes data per their <a href="https://firebase.google.com/support/privacy">privacy rules</a>. Retention is as long as needed for these purposes, typically 30 days for logs. [web:9][web:6]</p>
       
       <h2>Your Rights and Choices</h2>
-      <p>Users can opt out of Analytics via device settings or browser extensions. Under GDPR/DPDP/CCPA, contact us at [your-email@example.com] to access, delete, or restrict data. We respond within 30 days. No "Do Not Track" signals are honored as no tracking occurs. [web:1][web:8]</p>
+      <p>Users can opt out of Analytics via device settings or browser extensions. Under GDPR/DPDP/CCPA, contact us at [rambabu.roges96@gmail.com] to access, delete, or restrict data. We respond within 30 days. No "Do Not Track" signals are honored as no tracking occurs. [web:1][web:8]</p>
       
       <h2>Security</h2>
       <p>Firebase provides industry-standard security like encryption and access controls. We do not send prohibited data (e.g., financial or health info) to Firebase. [web:1]</p>
