@@ -26,7 +26,7 @@ MEDIA QUERIES
       scroll-behavior: smooth;
     }
     .container {
-      margin-left: 50px;
+      margin-left: 1rem;
     }
     body {
       width: 100%;
@@ -354,4 +354,13 @@ MEDIA QUERIES
     background: -webkit-linear-gradient(#b48a3c, #e4d210);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+
+  
+@media only screen and (max-width: 767px)  {
+      .grad_textcss {
+        
+    font-size: 1.5rem;
+      }
   }
