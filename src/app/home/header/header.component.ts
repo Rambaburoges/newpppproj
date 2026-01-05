@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,20 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+ngOnInit () {
+
+}
+contactPage() {
+this.scrollDownByViewport();
+}
+
+
+constructor(private viewportScroller: ViewportScroller) {}
+scrollDownByViewport() {
+  const currentY = window.scrollY;
+  const viewportHeight = window.innerHeight;
+  this.viewportScroller.scrollToPosition([0, currentY + viewportHeight]);
+}
 
 }
