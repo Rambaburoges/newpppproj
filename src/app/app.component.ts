@@ -13,9 +13,9 @@ export class AppComponent implements OnInit,AfterViewInit
  {
   constructor(private meta: Meta, private title: Title) {}  // Dependency injection [web:77]
   ngOnInit(): void {
-    this.title.setTitle('Steel Scoring Dies India | Precision Makers');
+    this.title.setTitle('Indian Scoring Dies Makers India');
   this.meta.updateTag({ 
-      name: 'description', 
+      name: 'ISD Makers | Indian Scoring Dies Makers Sivakasi', 
       content: 'Custom scoring dies for precision packaging & sheet metal in India. High-quality steel rotary tools from Sivakasi makers. Fast turnaround, ISO certified. Get your free quote today!' 
     });  
   }

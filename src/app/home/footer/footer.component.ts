@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +13,7 @@ export class FooterComponent implements OnInit {
   dynamicHtml: any
   @Input() content: any; // Make sure this line exists
 
-constructor(private sanitizer: DomSanitizer) {
+constructor(private sanitizer: DomSanitizer ,@Inject(DOCUMENT) private document: Document) {
   const privacyLet : string= `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -58,5 +59,10 @@ constructor(private sanitizer: DomSanitizer) {
 
   checkMyPolicy() {
  
+  }
+
+  gotoMap(){
+    this.document.location.href = 'https://share.google/crRDIZEtNAkZW1fcq';
+
   }
 }

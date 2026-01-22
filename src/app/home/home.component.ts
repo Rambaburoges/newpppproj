@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class HomeComponent implements OnInit {
 private dynamicHtml : SafeHtml='';
 
-constructor (private sanitizer: DomSanitizer) {
+constructor (private sanitizer: DomSanitizer ,@Inject(DOCUMENT) private document: Document,@Inject(PLATFORM_ID) private platformId: Object) {
   let someHtml = 
 `<html lang="en">
 <head>
@@ -47,9 +49,32 @@ this.dynamicHtml = this.sanitizer.bypassSecurityTrustHtml(someHtml);
 
 }
 ngOnInit(): void {
-  
+  this.getLocation()
 }
 
+// Source - https://stackoverflow.com/a
+// Posted by Malcor
+// Retrieved 2026-01-06, License - CC BY-SA 4.0
+
+getLocation(): void{
+
+  if (isPlatformBrowser(this.platformId) && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position)=>{
+        const longitude = position.coords.longitude;
+        const latitude = position.coords.latitude;
+        this.callApi(longitude, latitude);
+      });
+  } else {
+     console.log("No support for geolocation")
+  }
+}
+
+callApi(Longitude: number, Latitude: number){
+  const url = `https://api-adresse.data.gouv.fr/reverse/?lon=${Longitude}&lat=${Latitude}`
+  //Call API
+  console.log(url);
+  
+}
 
 
 
