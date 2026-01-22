@@ -20,10 +20,10 @@ constructor (private sanitizer: DomSanitizer ,@Inject(DOCUMENT) private document
 `<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy - [Your Site Name]</title>
+    <title>Privacy Policy - [Indian Scoring Steel Dies Makers]</title>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
+    <h1>Privacy Policy For [Indian Scoring Steel Dies Makers]</h1>
     <p><strong>Effective Date:</strong> [Insert Date, e.g., December 13, 2025]</p>
     
     <h2>Introduction</h2>
