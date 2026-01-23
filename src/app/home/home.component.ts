@@ -1,14 +1,19 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
+import { ServicesComponent } from '../services/services.component';
+import { AboutComponent } from '../about/about.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent,ServicesComponent,AboutComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

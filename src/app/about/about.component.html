@@ -1,0 +1,36 @@
+	<!-- START SECTION SERVICES -->
+	<section class="section-services ">
+		<div class="container">
+			<div class="row">
+<div class="col-md-12">
+    <h1 class="text-center">About Us</h1>
+    <div style="margin-bottom: 1rem;" class="mb-3 heading-underline"></div>
+    <div class="col-md-6">
+        <div>
+            <h3><strong>Company Overview</strong></h3>
+            <div class="timeline">
+                <div class="timeline-step" *ngFor="let data of companyAbout;trackBy: trackByUserId">
+                  <div class="dot"></div>
+                  <div class="content">
+                    <h3>   {{data.data}}
+                    </h3> 
+                  </div>
+                </div>
+              </div>
+              
+        <!-- <ul>
+            <li>
+               <p>
+               </p>
+            </li>
+        </ul> -->
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img src="../../assets/img/frontoffice.jpeg" width="808" height="400" alt="Lobby Image">
+        
+    </div>
+</div>
+
+            </div>
+        </div></section>
